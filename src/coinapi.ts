@@ -4,7 +4,7 @@ import { mockedAssets } from "./mock/assets";
 import { mockedOpenHighLowCloseVolumeSeries } from "./mock/ohlcv";
 
 axios.defaults.baseURL = "https://rest-sandbox.coinapi.io/";
-axios.defaults.headers.common["X-CoinAPI-Key"] = "MOCKED-KEY";
+axios.defaults.headers.common["X-CoinAPI-Key"] = process.env.X_COINAPI_KEY;
 
 export const getAssets: (useMock?: boolean) => Promise<Asset[]> = async (
   useMock = false
@@ -27,7 +27,7 @@ export const getOpenHighLowCloseVolume: (
   }
 
   const { data } = await axios.get<OpenHighLowCloseVolumeSet[]>(
-    "v1/ohlcv/GEMINI_SPOT_BTC_USD/latest?period_id=1MIN"
+    "v1/ohlcv/GEMINI_SPOT_BTC_USD/latest?period_id=1DAY"
   );
 
   return data;

@@ -1,16 +1,11 @@
 import { ApolloServer, gql } from "apollo-server-lambda";
 import { typeDefs } from "./typeDefs";
 import { resolvers } from "./resolvers";
-import { getOpenHighLowCloseVolume } from "./coinapi";
 
 export const handler = async event => {
-  console.log(event);
-
-  const x = await getOpenHighLowCloseVolume();
-  console.log(x);
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: "testing" }),
+    body: JSON.stringify({ message: "Hello test" }),
   };
 };
 
