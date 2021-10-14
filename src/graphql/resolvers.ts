@@ -1,5 +1,5 @@
-import { getAssets, getOpenHighLowCloseVolume } from "./coinapi";
-import { assetIds, periodIds } from "./metaData";
+import { getAssets, getOpenHighLowCloseVolume } from "../api/coinapi";
+import { assetIds, periodIds } from "../metaData";
 const USE_MOCK = false;
 
 export const resolvers = {

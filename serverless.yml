@@ -4,9 +4,7 @@ service: ser
 
 plugins:
   - serverless-plugin-typescript
-  # - serverless-esbuild
   - serverless-offline
-
 
 provider:
   name: aws
@@ -24,7 +22,7 @@ functions:
           path: test
           cors: true
   graphql:
-    handler: src/function.handler1
+    handler: src/function.graphqlHandler
     events:
       - http:
           method: post

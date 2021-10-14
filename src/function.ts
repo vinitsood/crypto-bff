@@ -1,8 +1,9 @@
 import { ApolloServer, gql } from "apollo-server-lambda";
-import { typeDefs } from "./typeDefs";
-import { resolvers } from "./resolvers";
+import { typeDefs } from "./graphql/typeDefs";
+import { resolvers } from "./graphql/resolvers";
 
 export const handler = async event => {
+  console.log(event);
   return {
     statusCode: 200,
     body: JSON.stringify({ message: "Hello test" }),
@@ -11,4 +12,4 @@ export const handler = async event => {
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
-export const handler1 = server.createHandler();
+export const graphqlHandler = server.createHandler();

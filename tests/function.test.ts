@@ -1,10 +1,11 @@
-import { handler } from "../src/function";
+import { handler, graphqlHandler } from "../src/function";
 
 describe("[function]", () => {
-  it("should return status 200", async () => {
+  it("handler should return status 200", async () => {
     const res = await handler(null);
     expect(res).toEqual({
-      status: 200,
+      statusCode: 200,
+      body: '{"message":"Hello test"}',
     });
   });
 });
