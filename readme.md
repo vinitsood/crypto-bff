@@ -1,14 +1,26 @@
-# Typescript Serverless esbuild demo
+# Crypto backend for front-end
 
-Backing code the [blog post](https://dev.to/tastefulelk/lightning-fast-simple-typescript-serverless-builds-33ed).
+Serverless backend that fetches historical from coinapi.io and communicates with front-end via GraphQL
+
+## Prerequisite
+
+```
+npm install -g serverless
+```
 
 ## Install
 
-`npm install`
+```
+git clone git@github.com:vinitsood/crypto-bff.git
+cd crypto-bff
+npm install
+```
 
-## Deploy
+## Development
 
-`npx serverless deploy`
+```
+serverless offline
+```
 
 ## Test
 
