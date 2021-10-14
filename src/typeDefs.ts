@@ -7,6 +7,7 @@ export const typeDefs = gql`
     type_is_crypto: Int!
     price_usd: Float!
     id_icon: String!
+    volume_1day_usd: number!
   }
 
   type OpenHighLowCloseVolume {
@@ -26,5 +27,7 @@ export const typeDefs = gql`
     hello: String
     assets: [Asset!]!
     openHighLowCloseVolumes: [OpenHighLowCloseVolume!]!
+    availableAssetIds: [String!]!
+    availablePeriodIds: [String!]!
   }
 `;

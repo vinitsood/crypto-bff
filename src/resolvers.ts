@@ -1,5 +1,6 @@
 import { AxiosResponse } from "axios";
 import { getAssets, getOpenHighLowCloseVolume } from "./coinapi";
+import { assetIds, periodIds } from "./metaData";
 const USE_MOCK = true;
 
 export const resolvers = {
@@ -13,5 +14,7 @@ export const resolvers = {
       const ohlcv = await getOpenHighLowCloseVolume(USE_MOCK);
       return ohlcv;
     },
+    availableAssetIds: () => assetIds,
+    availablePeriodIds: () => periodIds,
   },
 };

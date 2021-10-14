@@ -27,7 +27,7 @@ export const getOpenHighLowCloseVolume: (
   }
 
   const { data } = await axios.get<OpenHighLowCloseVolumeSet[]>(
-    "v1/ohlcv/GEMINI_SPOT_BTC_USD/latest?period_id=1DAY"
+    "v1/ohlcv/GEMINI_SPOT_BTC_USD/latest?period_id=1DAY&limit=25"
   );
 
   return data;

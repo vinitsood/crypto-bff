@@ -4,6 +4,7 @@ export interface Asset {
   type_is_crypto: number;
   price_usd: number;
   id_icon: string;
+  volume_1day_usd: number;
   [others: string]: any;
 }
 
