@@ -119,3 +119,6 @@ dist
 
 # esbuild
 .esbuild
+
+# build
+.build
