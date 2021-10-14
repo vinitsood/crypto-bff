@@ -25,8 +25,11 @@ export const typeDefs = gql`
 
   type Query {
     hello: String
-    assets: [Asset!]!
-    openHighLowCloseVolumes: [OpenHighLowCloseVolume!]!
+    assets(assetIds: String!): [Asset!]!
+    openHighLowCloseVolumes(
+      assetId: String!
+      periodId: String!
+    ): [OpenHighLowCloseVolume!]!
     availableAssetIds: [String!]!
     availablePeriodIds: [String!]!
   }
