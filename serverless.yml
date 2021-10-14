@@ -1,0 +1,35 @@
+# serverless.yml
+org: vinitsood
+app: try
+service: ser
+
+plugins:
+  - serverless-plugin-typescript
+  # - serverless-esbuild
+  - serverless-offline
+
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  function:
+    handler: src/function.handler
+    events:
+      - http:
+          method: get
+          path: test
+          cors: true
+  graphql:
+    handler: src/function.handler1
+    events:
+      - http:
+          method: post
+          path: graphql
+          cors: true
+      - http:
+          method: get
+          path: graphql
+          cors: true
