@@ -3,7 +3,7 @@ app: try
 service: ser
 
 plugins:
-  - serverless-plugin-typescript
+  - serverless-esbuild
   - serverless-offline
 
 provider:
