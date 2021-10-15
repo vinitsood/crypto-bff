@@ -28,9 +28,9 @@ export const typeDefs = gql`
     assets(assetIds: String!): [Asset!]!
     openHighLowCloseVolumes(
       assetId: String!
-      periodId: String!
+      intervalId: String!
     ): [OpenHighLowCloseVolume!]!
     availableAssetIds: [String!]!
-    availablePeriodIds: [String!]!
+    availableIntervalIds: [String!]!
   }
 `;

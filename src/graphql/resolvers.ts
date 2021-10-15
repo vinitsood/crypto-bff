@@ -1,5 +1,5 @@
 import { getAssets, getOpenHighLowCloseVolume } from "../api/coinapi";
-import { assetIds, periodIds } from "../metaData";
+import { assetIds, intervalIds } from "../metaData";
 const USE_MOCK = false;
 
 export const resolvers = {
@@ -11,16 +11,16 @@ export const resolvers = {
     },
     openHighLowCloseVolumes: async (
       _: object,
-      args: { assetId: string; periodId: string }
+      args: { assetId: string; intervalId: string }
     ) => {
       const ohlcv = await getOpenHighLowCloseVolume(
         args.assetId,
-        args.periodId,
+        args.intervalId,
         USE_MOCK
       );
       return ohlcv;
     },
     availableAssetIds: () => assetIds,
-    availablePeriodIds: () => periodIds,
+    availableIntervalIds: () => intervalIds,
   },
 };

@@ -17,4 +17,11 @@ export const assetIds = [
   "ZEC",
 ];
 
-export const periodIds = ["1MIN", "15MIN", "1HRS", "1DAY"];
+export const intervalIds = ["DAY", "WEEK", "MONTH", "YEAR"];
+
+export const periodIdMap = {
+  DAY: { periodId: "1HRS", limit: 24 },
+  WEEK: { periodId: "1DAY", limit: 7 },
+  MONTH: { periodId: "1DAY", limit: 31 },
+  YEAR: { periodId: "7DAY", limit: 52 },
+};
