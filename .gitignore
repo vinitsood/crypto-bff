@@ -122,3 +122,6 @@ dist
 
 # build
 .build
+
+#.DS_Store
+.DS_Store
