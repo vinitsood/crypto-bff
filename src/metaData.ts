@@ -10,8 +10,6 @@ export const assetIds = [
   "LTC",
   "XMR",
   "NEM",
-  "OMNI",
-  "QTUM",
   "XRP",
   "XLM",
   "ZEC",
