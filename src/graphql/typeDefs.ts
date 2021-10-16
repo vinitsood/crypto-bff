@@ -25,7 +25,7 @@ export const typeDefs = gql`
 
   type Query {
     hello: String
-    assets(assetIds: String!): [Asset!]!
+    assets: [Asset!]!
     openHighLowCloseVolumes(
       assetId: String!
       intervalId: String!

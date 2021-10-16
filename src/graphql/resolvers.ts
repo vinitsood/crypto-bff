@@ -5,8 +5,8 @@ const USE_MOCK = false;
 export const resolvers = {
   Query: {
     hello: () => "Hello world!",
-    assets: async (_: object, args: { assetIds: string }) => {
-      const assets = await getAssets(args.assetIds, USE_MOCK);
+    assets: async () => {
+      const assets = await getAssets(assetIds.toString(), USE_MOCK);
       return assets;
     },
     openHighLowCloseVolumes: async (
